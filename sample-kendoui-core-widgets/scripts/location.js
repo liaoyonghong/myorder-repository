@@ -30,9 +30,9 @@
                 },
                 function (error) {
                     //default map coordinates
-                    position = new google.maps.LatLng(43.459336, -80.462494);
+                    position = new google.maps.LatLng(22.286394, 114.149139);
                     map.panTo(position);
-
+                    console.log("position",position);
                     that._isLoading = false;
                     that.toggleLoading();
 

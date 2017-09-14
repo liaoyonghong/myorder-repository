@@ -151,3 +151,61 @@
         background-size: 100%;
     }
 }
+
+.labelfont{
+    color:blue;
+}
+
+#kendoUiMobileApp .km-content li label:not(.km-label-above) > span:not(.km-widget),
+#kendoUiMobileApp .editableListItem > div,
+#kendoUiMobileApp .editableListItem:not(.km-label-above) > div,
+#kendoUiMobileApp .imageListItem:not(.km-label-above) > div {
+    word-break: break-word;
+    width: 50%;
+    padding-right: 10px;
+}
+
+#kendoUiMobileApp .km-content li label:not(.km-label-above) > span:not(.km-widget):last-child,
+#kendoUiMobileApp .editableListItem > div:last-child,
+#kendoUiMobileApp .editableListItem:not(.km-label-above) > div:last-child,
+#kendoUiMobileApp .imageListItem:not(.km-label-above) > div:last-child {
+    padding-right: 0;
+}
+
+#kendoUiMobileApp .editableListItem.km-label-above > div,
+#kendoUiMobileApp .imageListItem.km-label-above > div {
+    width: 100%;
+    float: none;
+    padding-right: 0;
+}
+#kendoUiMobileApp.km-widget .km-list .km-label-above textarea,
+#kendoUiMobileApp.km-widget textarea {
+    left: 0;
+    float: none;
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+     color: green;
+}
+
+ fieldset {
+
+        border-color:lightblue;
+        padding:8px;
+        border-radius: 8px;
+        margin-bottom:10px;
+
+        /*background:#EEE;*/
+
+        }
+
+    legend {
+
+        padding:5px 10px;
+        color:green;
+
+        /*background-color:#4F709F;
+
+        color:#FFF;*/
+
+        }

@@ -17,25 +17,57 @@
     <script src="scripts/location.js"></script>
     <script src="scripts/weather.js"></script>
 </head>
-<body>
+<body id="kendoUiMobileApp">
     <!--Home View-->
     <div id="tabstrip-home"
         data-role="view"
-        data-title="Home">
-        <header data-role="header">
+        data-title="My Order">
+        <header data-role="header" style="background-color:blue">
             <div data-role="navbar">
-                <span data-role="view-title"></span>
-                <a id="skin-change" data-role="button" data-align="right" data-click="app.changeSkin">Flat</a>
+                <span data-role="view-title"></span>               
             </div>
         </header>
-
-        <h3>Welcome!</h3>
-        <p>
-            Telerik AppBuilder&trade; enables you to build cross-platform device applications regardless of your
-            development platform by combining the convenience of a local development toolset with the
-            power and flexibility of the cloud.
-        </p>
-        <div class="welcome-image"></div>
+        <fieldset>
+            <legend>Order Information</legend>
+            <form>
+            <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+                <li>
+                    <label  class="km-label-above labelfont">
+                        <div><span class="km-icon km-contacts"></span>Customer Name:</div>
+                        <input type="text"  data-bind="value: username" />
+                    </label>
+                </li>
+                <li>
+                    <label  class="labelfont">
+                        <div><span class="km-icon km-phone"></span>Phone 1:</div>
+                        <input type="text" data-bind="value: password" />
+                    </label>
+                </li>
+                <li>
+                    <label  class="labelfont">
+                        <div><span class="km-icon km-phone"></span>Phone 2:</div>
+                        <input type="text" data-bind="value: password" />
+                    </label>
+                </li>
+                <li>
+                    <label  class="labelfont">
+                        <div><span class="km-icon km-cart"></span>Order Qty.:</div>
+                        <input type="number" data-bind="value: password" min="1"/>
+                    </label>
+                </li>
+                <li>
+                    <label  class="labelfont">
+                        <div><span class="km-icon km-home"></span>Address:</div>
+                        <textarea></textarea>
+                    </label>
+                </li>
+                
+            </ul>
+            </form>
+            <br/>
+            <input id="login" type="submit" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" value="Submit" class="login-button" />
+        </fieldset>
+        
     </div>
 
     <!--Login View-->
